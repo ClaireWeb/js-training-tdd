@@ -11,9 +11,18 @@
  */
 
 // Your code:
-
+const cutFirst = str => str.slice(2)
+const cutLast = str => {
+  const strLen = str.length
+  return str.slice(0, strLen-2)
+}
+const cutFirstLast = str => {
+  const strLen = str.length
+  return str.slice(2, strLen-2)
+}
 //* Begin of tests
 const assert = require('assert');
-
-assert.fail('You must write your own tests');
+assert.strictEqual(cutFirst('javascript'),'vascript')
+assert.strictEqual(cutLast('javascript'), 'javascri')
+assert.strictEqual(cutFirstLast('javascript'), 'vascri')
 // End of tests */
